@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Zoo</title>
+    <link rel="stylesheet" href="static/home.css">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='Home Background.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Rigit Zoo Adventure</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="hotel.html">Hotel Page</a>
+        <a href="./purchaseticket.html">Tickets Purchase</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Sign in</a>
+        <a href="education.html">Education</a>
+        <a href="attraction.html">Attractions</a>
+        <a href="Policy.html">Privacy Policy</a>
+
+
+    </nav>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h2>Explore the Wonders of Wildlife</h2>
+            <p>Plan your visit today!</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="feature">
+            <div class="feature-item">
+                <img src="{{ url_for('static', filename='HotelZoo.jpg') }}" alt="Hotel Room" height="150px" width="150px">
+
+                <h3>Book a Hotel Room</h3>
+                <p>Stay with us and enjoy a comfortable stay close to the zoo.</p>
+            </div>
+            <div class="feature-item">
+                <img src="{{ url_for('static', filename='ZooTickets.jpg') }}" alt="Zoo Tickets" height="150px" width="150px">
+                <h3>purchase Tickets</h3>
+                <p>Buy tickets online and skip the lines at the entrance.</p>
+            </div>
+            <div class="feature-item">
+                <img src="{{ url_for('static', filename='Animals.jpg') }}" alt="animals" height="150px" width="150px">
+
+                <h3>Search</h3>
+                <p>Find information about our animals, exhibits, and more.</p>
+            </div>
+      
+
+</body>
+</html

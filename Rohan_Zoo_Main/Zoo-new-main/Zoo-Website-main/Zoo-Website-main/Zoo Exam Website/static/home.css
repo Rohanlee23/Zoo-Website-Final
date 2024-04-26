@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #d2e502;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #ebe5e5;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero-image {
+    background-image: url(/Pictures/Animals.jpg);
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.783);
+    padding: 20px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.feature {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.feature-item {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-basis: 30%;
+}
+
+.feature-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    color: #4CAF50;
+}
+
+.feature-item p{
+    color: white;
+}
+

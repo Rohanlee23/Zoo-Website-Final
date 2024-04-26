@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="/static/hotel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking</h1>
+    </header>
+    <main>
+        <section class="room-selection">
+            <h2>Select a Room</h2>
+            <div class="room-container">
+                <div class="room">
+                    <h3>Deluxe Room</h3>
+                    <p>Price per night: £250</p>
+                    <img src="{{ url_for('static', filename='Deluxe Room.jpg') }}" alt="Deluxe Room" height="300px" width="400px">
+                    <br>
+                    <button onclick="selectRoom('Deluxe Room')">Select</button>
+                </div>
+                <div class="room">
+                    <h3>Suite Room</h3>
+                    <p>Price per night: £150</p>
+                    <img src="{{ url_for('static', filename='SuiteRoom.jpg') }}" alt="Suite Room" height="300px" width="400px">
+                    <br>
+                    <button onclick="selectRoom('Suite Room')">Select</button>
+                </div>
+            </div>
+        </section>
+        <section class="guest-info" style="display: none;">
+            <h2>Guest Information</h2>
+            <form id="bookingForm" action="/book_room" method="post">
+                <input type="hidden" id="roomType" name="roomType" value="">
+                <label for="date">Select Booking Date:</label>
+                <input type="text" id="date" name="bookingDate" required>
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="numGuests" min="1" value="1">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="fullName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" onclick="return bookRoom()">Submit Booking</button>
+            </form>
+            
+            <button id="backButton" style="display: none;" onclick="goBack()">Back</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hotel Booking</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script>
+        var bookedDates = ["2024-04-26", "2024-04-27"];
+
+        var picker = new Pikaday({
+            field: document.getElementById('date'),
+            format: 'YYYY-MM-DD',
+            minDate: new Date(),
+            disableDayFn: function(date) {
+                var formattedDate = date.toISOString().split('T')[0];
+                return bookedDates.includes(formattedDate);
+            },
+            onSelect: function(date) {
+                var formattedDate = date.toISOString().split('T')[0];
+                if (!bookedDates.includes(formattedDate)) {
+                    showGuestInfo();
+                } else {
+                    alert('Sorry, this date is already booked. Please select another date.');
+                    document.getElementById('backButton').style.display = 'inline';
+                }
+            }
+        });
+
+        function selectRoom(roomType) {
+            document.getElementById('roomType').value = roomType;
+            showGuestInfo();
+        }
+
+        function showGuestInfo() {
+            document.querySelector('.room-selection').style.display = 'none';
+            document.querySelector('.guest-info').style.display = 'block';
+        }
+
+        function bookRoom() {
+            var selectedDate = document.getElementById('date').value;
+            if (bookedDates.includes(selectedDate)) {
+                alert('Sorry, this date is already booked. Please select another date.');
+                document.getElementById('backButton').style.display = 'inline'; 
+                return false; 
+            }
+            return true; 
+        }
+
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

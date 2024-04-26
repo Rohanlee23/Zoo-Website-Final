@@ -1,0 +1,73 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.room-selection, .guest-info {
+    background-color: #ffffff;
+    border: 1px solid #030303;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 5px; 
+    flex-grow: 1;
+    text-align: center;
+}
+
+.room-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.room {
+    text-align: center;
+    margin: 20px;
+}
+
+.room img {
+    display: block;
+    margin: 0 auto; 
+}
+.room h3 {
+    margin-top: 50px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+

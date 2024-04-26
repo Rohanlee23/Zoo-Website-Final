@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Tickets Booking System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tickets.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='TicketsBackground.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Zoo Tickets Booking System</h2>
+
+<form action="{{ url_for('process_booking') }}" method="post">
+    <table>
+        <tr>
+            <th>Ticket Type</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Adults Ticket</td>
+            <td>£20</td>
+            <td><input type="number" name="adults" id="adults" value="0" min="0"></td>
+        </tr>
+        <tr>
+            <td>Children's Ticket</td>
+            <td>£10</td>
+            <td><input type="number" name="children" id="children" value="0" min="0"></td>
+        </tr>
+    </table>
+    <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
+    <br>
+    <br>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+    <br>
+    <br>
+    <label for="member">Are you a member? (10% discount)</label>
+    <input type="checkbox" id="member" name="member">
+
+    <button type="submit">Submit</button>
+</form>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

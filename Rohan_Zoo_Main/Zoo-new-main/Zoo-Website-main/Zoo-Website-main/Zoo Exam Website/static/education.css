@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #efebeb; 
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 4px solid #16a085;
+    position: relative; /* Relative positioning to contain the images */
+    top: 150px;
+   
+    
+}
+
+.container p {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+.zoo-animal{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    
+}
+
+.zoo-animal img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+footer {
+    background-color:#efebeb; 
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center; 
+}
+
+footer p {
+    margin: 0;
+}

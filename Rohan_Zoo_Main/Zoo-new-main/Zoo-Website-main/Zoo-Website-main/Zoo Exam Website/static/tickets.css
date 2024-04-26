@@ -1,0 +1,75 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin-top: 200px;
+    
+}
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.803);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+input[type="number"] {
+    width: 60px;
+}
+
+button[type="submit"], button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+#totalPrice {
+    font-weight: bold;
+}
+
+
+.success-message {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    border-radius: 5px;
+    text-align: center;
+}
